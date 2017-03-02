@@ -1,0 +1,99 @@
+body{
+	background-color : black;
+	width : 1300px;
+	overflow: scroll;
+}
+
+
+#canvas{
+	background-color : #ffffff;
+	margin : 27px;
+	width : 1296px;
+}
+
+
+#heading{
+	text-align:center;
+	color: #C11B17;
+	opacity: 1.0;
+	font-size: 18pt;
+	font-weight: bold;
+}
+
+
+#heading-background{
+	background-image: url("./images/essay-back.jpg");
+	width : 100%;
+	height: 10%;
+	opacity: 0.74;
+}
+
+
+#essay{
+	margin-top: 30px;
+	margin-left : 118px;
+	margin-right: 50px;
+	text-align: justify;
+}
+
+
+#conclusion{
+	font-size: 11pt;
+	text-align: center;
+	color: gray;
+}
+
+img{
+	width:88px;
+	height: 88px;
+	float: left;
+	margin: 13px;
+}
+
+
+table{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+
+th{
+	font-size: 14pt;
+}
+
+
+td{
+	font-size:13pt;
+}
+
+
+th, td{
+	padding: 8px;
+}
+
+
+h2{
+	text-decoration: underline;
+	margin: 8px;
+	color: #151B8D;
+}
+
+
+h3{
+	margin: 23px;
+}
+
+
+.score{
+	color:#ff0f0f;
+	margin-right: 50px;
+	text-decoration: none;
+	font-size: 22pt;
+}
+
+th.big{
+	color:#ff0f0f;
+	text-decoration: none;
+	font-size: 22pt;
+}
+
