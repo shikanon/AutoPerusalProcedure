@@ -10,29 +10,231 @@
     <div class="demo">
         <div class="header">
             <div class="header_content">
-                <h1 class="logo">logo</h1>
+                <div class="nav">
+                    <h1 class="logo">英语作业批改系统</h1>
+                    <ul class="register_login">
+                        <li class="register">登录</li>
+                        <li class="login">注册</li>
+                    </ul>
+                </div>
                 <div class="submitstyle">
+                    <div class="submit_title">上传文件：</div>
                     <form enctype="#" method="get" action="#" class="formcontent">
+                        <input type="text" placeholder="浏览..." value="" class="filetext"
+                               id="filetext"/>
                         <input type="file" name="file"
-                               class="file" value="上传文件"/>
+                               class="file" value="上传文件"
+                               id="file"  onchange="document.getElementById('filetext').value=this.value"/>
                         <input type="submit" name="submit" value="" class="submit">
                     </form>
                 </div>
             </div>
-
         </div>
         <div class="middle">
             <div class="main_left">
+                <div class="content_top">
+                    <h3>作文内容</h3>
+                    <div class="content_time">批改时间：2017/3/3 22:34</div>
+                </div>
                 <div class="content">
-                   <textarea class="text">这里是英语作文</textarea>
+                   <textarea class="text" placeholder="编辑你所需要批改的内容">　　English is a internationaly language which becomes importantly for modern world.
+
+    In China, English is took to be a foreigh language which many student choosed to learn. They begin to studying English at a early age. They use at least one hour to learn English knowledges a day. Even kids in kindergarten have begun learning simple words. That's a good phenomenan, for English is essential nowadays.
+
+    In addition to, some people think English is superior than Chinese. In me opinion, though English is for great significance, but English is after all a foreign language. it is hard for people to see eye to eye. English do help us read English original works, but Chinese helps us learn a true China. Only by characters Chinese literature can send off its brilliance. Learning a country's culture, especial its classic culture, the first thing is learn its language. Because of we are Chinese, why do we give up our mother tongue and learn our owne culture through a foreign language?
+				   </textarea>
+                </div>
+                <div class="fl">
+                    <span id="jk" class="title">清空</span>
+                    <input name="snt_no_pred" class="carv" id="snt_no_pred" type="checkbox"> <label for="snt_no_pred">检查谓语动词</label>
+                    <input name="snt_mul_tense" class="carv" id="snt_mul_tense" type="checkbox"> <label for="snt_mul_tense">检查语态一致</label>
+                    <a>知识点定制</a>
+                </div>
+                <div class="fr">
+                    <button class="btn">点击批改</button>
                 </div>
             </div>
             <div class="main_right">
-                <div class="main_right_test1">内容一</div>
-                <div class="main_right_test2">内容二</div>
-                <div class="main_right_test3">内容三</div>
+                <div class="main_right_test" id="mrtest">
+                    <div class="con_navbar">
+                        <div class="navlist active">分数评语</div>
+                        <div class="navlist">按句点评</div>
+                        <div class="navlist">按句点评</div>
+                    </div>
+                    <div class="test_content">
+						<div class="test"  style="display: block;" >
+						    <div class="alert_test" style="padding:50px;text-align:center;display:none;">请点击“开始批改“按钮进行分析</div>
+							<!--<div class="score">-->
+								<!--78分-->
+							<!--</div>-->
+							<div class="range">
+                                <div class="score">
+                                    80分
+                                </div>
+                                <table class="mranger">
+                                    <tr>
+                                        <td style="width:25%;">词　　汇：</td>
+                                        <td>
+                                            <div class="ranger">
+                                                <div class="rdj-range">
+                                                    <div class="range-runway"> </div>
+                                                    <div class="range-thumb"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>句　　子：</td>
+                                        <td>
+                                            <div class="ranger">
+                                                <div class="rdj-range">
+                                                    <div class="range-runway"> </div>
+                                                    <div class="range-thumb"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>篇章结构：</td>
+                                        <td>
+                                            <div class="ranger">
+                                                <div class="rdj-range">
+                                                    <div class="range-runway"> </div>
+                                                    <div class="range-thumb"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>相关内容：</td>
+                                        <td>
+                                            <div class="ranger">
+                                                <div class="rdj-range">
+                                                    <div class="range-runway"> </div>
+                                                    <div class="range-thumb"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="pingyuW">
+                                    <a href="#" target="_blank" >评语</a>：<span style="font-size:12px;">词汇表达灵活丰富请继续保持，也能较好的使用一定的高级词汇；全文结构较为严谨；增加一些从句的使用，文章会更棒。</span>
+                                </div>
+                            </div>
+						</div>
+						<div class="test test2">
+						    <div class="alert_test" style="padding:50px;text-align:center;display:none;">请点击“开始批改“按钮进行分析</div>
+							<!--<div class="score">-->
+								<!--78分-->
+							<!--</div>-->
+							<div style="padding:10px;min-height:300px;">
+                                <div class="evaluate">
+                                    <h4>第一段:</h4>
+                                    <div class="evaluate_paragraph">
+                                        <span>1.</span>
+                                        English is a internationaly language which becomes importantly for modern world.
+                                    </div>
+                                    <ul class="evaluate_title">
+                                        <li >
+                                           <span  class="ticon">√</span>
+                                            这里是对的内容
+                                        </li>
+                                        <li>
+                                            <span class="ficon">×</span>
+                                            这里是错的内容
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="evaluate">
+                                    <h4>第二段:</h4>
+                                    <div class="evaluate_paragraph">
+                                        <span>2.</span>
+                                    这里是第二段内容
+                                    </div>
+                                    <ul class="evaluate_title">
+                                        <li >
+                                            <span  class="ticon">√</span>
+                                            这里是对的内容
+                                        </li>
+                                        <li>
+                                            <span class="ficon">×</span>
+                                            这里是错的内容
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="evaluate">
+                                    <h4>第三段:</h4>
+                                    <div class="evaluate_paragraph">
+                                        <span>3.</span>
+                                        这里是第三段内容
+                                    </div>
+                                    <ul class="evaluate_title">
+                                        <li >
+                                            <span  class="ticon">√</span>
+                                            这里是对的内容
+                                        </li>
+                                        <li>
+                                            <span class="ficon">×</span>
+                                            这里是错的内容
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+						</div>
+						<div class="test">
+						    <div class="alert_test" style="padding:50px;text-align:center;">请点击“开始批改“按钮进行分析</div>
+							<!--<div class="score">-->
+								<!--78分-->
+							<!--</div>-->
+							<div class="range" style="display:none;">rtyudfgh</div>
+						</div>
+						    
+                    </div>
+					
+				
+				
+				
+				
+					
+					<div style="padding-left:10px;font-size:12px;color:#444;margin-top:15px;">
+			提示：
+			<div style="padding-left:0px;font-size:12px;line-height:20px;"> 
+
+	1.快速体验不检测跑题，批改网作文打分公式可根据学校实际情况配置 <br>
+
+	2.中式英语指的是在英语母语用户很少使用的表达，如一些中国特色的表达“改革开放”等，不一定就是错的 <br>
+
+	3.批改网的评分原理是测量作文和语料库之间的距离，所以一些诸如莎士比亚的戏曲作品或者古英语小说，有可能得不了高分 <br>
+	4.测试作文只支持500单词，超过500单词请注册登录使用 </div>			 
+		</div>
+                </div>
             </div>
+        </div>
+        <div class="footer" style="padding: 20px 0;text-align: center">
+            English is a internationaly language which becomes importantly for modern world.
         </div>
     </div>
 </body>
+ <script>
+     window.onload=function () {
+         var mrtest=document.getElementById('mrtest');
+         var navlist=mrtest.getElementsByClassName('navlist');
+         var test=mrtest.getElementsByClassName('test');
+         for(var i=0;i<navlist.length;i++){
+             navlist[i].index=i;
+             navlist[i].onclick=function(){
+                 for(var j=0;j<navlist.length;j++){
+                     navlist[j].className='navlist';
+                     test[j].style.display='none';
+                 }
+                 navlist[this.index].className='navlist active';
+                 test[this.index].style.display='block';
+             };
+
+         }
+     }
+
+    </script>
 </html>
