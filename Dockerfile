@@ -1,5 +1,8 @@
 FROM python:2-onbuild
+MAINTAINER shikanon <shikanon@foxmail.com>
 
+RUN apt-get update
+RUN apt-get install python-software-properties software-properties-common -y
 RUN apt-add-repository ppa:python-pylinkgrammar/getsome
 RUN apt-get install liblink-grammar4 liblink-grammar4-dev cmake swig enchant -y
 RUN pip install pylinkgrammar pyenchant nltk pyyaml networkx

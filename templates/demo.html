@@ -18,10 +18,14 @@
                     </ul>
                 </div>
                 <div class="submitstyle">
+<<<<<<< HEAD:template/demo.html
                     <div class="submit_title">上传文件：</div>
                     <form enctype="#" method="get" action="#" class="formcontent">
                         <input type="text" placeholder="浏览..." value="" class="filetext"
                                id="filetext"/>
+=======
+                    <form enctype="multipart/form-data" method="post" action="/upload" class="formcontent">
+>>>>>>> ef5572ed812c87726711d9ae1607e33245352660:templates/demo.html
                         <input type="file" name="file"
                                class="file" value="上传文件"
                                id="file"  onchange="document.getElementById('filetext').value=this.value"/>
