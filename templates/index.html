@@ -54,7 +54,7 @@
                 <div class="main_right_test" id="mrtest">
                     <div class="con_navbar">
                         <div class="navlist active">分数评语</div>
-                        <div class="navlist">拼写点评</div>
+                        <div class="navlist">按句点评</div>
                         <div class="navlist">按句点评</div>
                     </div>
                     <div class="test_content">
@@ -124,22 +124,57 @@
 								<!--78分-->
 							<!--</div>-->
 							<div style="padding:10px;min-height:300px;">
-                                <div class="evaluate">总 ${spellings['Spellings']} 个错误单词</div>
-                                % for word in spellings["misspeltWordSug"]:
-                                    <div class="evaluate">
-                                        <h4>第${loop.index + 1}个 错误单词：${word}</h4>
-                                        <div class="evaluate_paragraph">
-                                            <span>${loop.index + 1}.</span>
-                                            应该改为 ${spellings["misspeltWordSug"][word][0]}
-                                            <span  class="ticon">√</span>
-                                        </div>
-                                        <ul class="evaluate_title">
-                                            <li >
-                                                或者可能为：${spellings["misspeltWordSug"][word]}
-                                            </li>
-                                        </ul>
+                                <div class="evaluate">
+                                    <h4>第一段:</h4>
+                                    <div class="evaluate_paragraph">
+                                        <span>1.</span>
+                                        English is a internationaly language which becomes importantly for modern world.
                                     </div>
-                                % endfor
+                                    <ul class="evaluate_title">
+                                        <li >
+                                           <span  class="ticon">√</span>
+                                            这里是对的内容
+                                        </li>
+                                        <li>
+                                            <span class="ficon">×</span>
+                                            这里是错的内容
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="evaluate">
+                                    <h4>第二段:</h4>
+                                    <div class="evaluate_paragraph">
+                                        <span>2.</span>
+                                    这里是第二段内容
+                                    </div>
+                                    <ul class="evaluate_title">
+                                        <li >
+                                            <span  class="ticon">√</span>
+                                            这里是对的内容
+                                        </li>
+                                        <li>
+                                            <span class="ficon">×</span>
+                                            这里是错的内容
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="evaluate">
+                                    <h4>第三段:</h4>
+                                    <div class="evaluate_paragraph">
+                                        <span>3.</span>
+                                        这里是第三段内容
+                                    </div>
+                                    <ul class="evaluate_title">
+                                        <li >
+                                            <span  class="ticon">√</span>
+                                            这里是对的内容
+                                        </li>
+                                        <li>
+                                            <span class="ficon">×</span>
+                                            这里是错的内容
+                                        </li>
+                                    </ul>
+                                </div>
 
                             </div>
 
@@ -149,33 +184,7 @@
 							<!--<div class="score">-->
 								<!--78分-->
 							<!--</div>-->
-							<div style="padding:10px;min-height:300px;">
-                                % for sentence in grammar["grammarSentScore"]:
-                                    <div class="evaluate">
-                                        <h4>第${loop.index + 1}句</h4>
-                                        <div class="evaluate_paragraph">
-                                            <span>${loop.index + 1}.</span>
-                                            ${sentence}
-                                        </div>
-                                        <ul class="evaluate_title">
-                                            % if grammar["grammarSentScore"][sentence] > 4:
-                                            <li >
-                                               <span  class="ticon">√</span>
-                                                这句很优雅，继续努力！得分:${grammar["grammarSentScore"][sentence]}
-                                            </li>
-                                            % else:
-                                            <li>
-                                                <span class="ficon">×</span>
-                                                这句有待改进，继续努力！得分:${grammar["grammarSentScore"][sentence]}
-                                            </li>
-                                            % endif
-                                        </ul>
-                                    </div>
-                                % endfor
-
-                            </div>
-
-						    </div>
+							<div class="range" style="display:none;">rtyudfgh</div>
 						</div>
 
                     </div>
@@ -189,13 +198,12 @@
 			提示：
 			<div style="padding-left:0px;font-size:12px;line-height:20px;">
 
-	1.说明111111 <br>
+	1.快速体验不检测跑题，批改网作文打分公式可根据学校实际情况配置 <br>
 
-	2.说明111111 <br>
+	2.中式英语指的是在英语母语用户很少使用的表达，如一些中国特色的表达“改革开放”等，不一定就是错的 <br>
 
-	3.说明111111 <br>
-	4.说明111111
-            </div>
+	3.批改网的评分原理是测量作文和语料库之间的距离，所以一些诸如莎士比亚的戏曲作品或者古英语小说，有可能得不了高分 <br>
+	4.测试作文只支持500单词，超过500单词请注册登录使用 </div>
 		</div>
                 </div>
             </div>
