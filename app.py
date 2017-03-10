@@ -24,6 +24,8 @@ def upload_file():
     if request.method == 'POST':
         file = request.files['file']
         eassy = file.read()
+        if not eassy:
+            return render_template('index.html')
         if eassy[:3] == codecs.BOM_UTF8:
             eassy = eassy[3:]
         check_result = check_essay(eassy)
