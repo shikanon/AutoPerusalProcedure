@@ -27,16 +27,17 @@ def deal_txt(ustring):
     return rstring
 
 def mark_score(check_result):
+    check_result['grammar']['grammarCumScore'] = check_result['grammar']['grammarCumScore']*100/5
     if check_result['statistics']['avgSentLen'] > 10:
-        check_result['statistics']['statisticsScore'] = 33
+        check_result['statistics']['statisticsScore'] = 100
     else:
-        check_result['statistics']['statisticsScore'] = check_result['statistics']['avgSentLen'] / 10 * 33
+        check_result['statistics']['statisticsScore'] = check_result['statistics']['avgSentLen'] *10
     if check_result['spellings']['Spellings'] > 10:
         check_result['spellings']['spellingScore'] = 0
     else:
-        check_result['spellings']['spellingScore'] = (10 - check_result['spellings']['Spellings']) * 34
-    check_result['totalScore'] = check_result['grammar']['grammarCumScore'] + (10 - check_result['spellings']['Spellings']) * 5 + \
-                            check_result['statistics']['statisticsScore']
+        check_result['spellings']['spellingScore'] = (10 - check_result['spellings']['Spellings']) * 100
+    check_result['totalScore'] = (check_result['grammar']['grammarCumScore'] + check_result['statistics']['statisticsScore'] + \
+                            check_result['statistics']['statisticsScore'])/3
     return check_result
 
 def check_essay(essay):
