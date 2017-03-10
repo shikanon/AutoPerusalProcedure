@@ -30,13 +30,13 @@ def mark_score(check_result):
     if check_result['statistics']['avgSentLen'] > 10:
         check_result['statistics']['statisticsScore'] = 33
     else:
-        check_result['statistics']['statisticsScore'] = test['statistics']['avgSentLen'] / 10 * 33
+        check_result['statistics']['statisticsScore'] = check_result['statistics']['avgSentLen'] / 10 * 33
     if check_result['spellings']['Spellings'] > 10:
         check_result['spellings']['spellingScore'] = 0
     else:
         check_result['spellings']['spellingScore'] = (10 - check_result['spellings']['Spellings']) * 34
     check_result['totalScore'] = check_result['grammar']['grammarCumScore'] + (10 - check_result['spellings']['Spellings']) * 5 + \
-                            check_result['statistics']['Score']
+                            check_result['statistics']['statisticsScore']
     return check_result
 
 def check_essay(essay):
