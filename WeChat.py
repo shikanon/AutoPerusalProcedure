@@ -16,15 +16,16 @@ def match_command(msg):
     if active_func:
         itchat.send(u'正在处理，请耐心等待...', msg['FromUserName'])
         func = active_func[0]
-        result = func(msg)
+        result = func(msg['Text'])
         itchat.send(''.join(result), msg['FromUserName'])
         return
     if msg['Text'] in config:
         active_func.append(config[msg['Text']])
         func = config[msg['Text']]
+        itchat.send(u'开启 '+msg['Text'], msg['FromUserName'])
     else:
         itchat.send(u'不懂你说什么哦，请~请~下达命令，主人...现在有以下几种服务：', msg['FromUserName'])
-        itchat.send('\n'.join(config.keys()), msg['FromUserName'])
+        itchat.send(';\n'.join(config.keys()), msg['FromUserName'])
 
 
 def command_mode(func):
@@ -43,6 +44,7 @@ def command_mode(func):
         if msg['Text'] == u'进入命令模式':
             UserActiveState[msg['FromUserName']] = True
             itchat.send(u'成功开启命令模式，请输入命令...', msg['FromUserName'])
+            itchat.send(u'现在有以下几个可用命令服务：\n'+'\n'.join(config.keys()), msg['FromUserName'])
             return Nothing
         elif msg['Text'] == u'退出命令模式':
             UserActiveState[msg['FromUserName']] = False
@@ -69,5 +71,6 @@ def download_files(msg):
     itchat.send('@%s@%s'%('img' if msg['Type'] == 'Picture' else 'fil', fileDir), msg['FromUserName'])
 
 
-itchat.auto_login(enableCmdQR=True)
+itchat.auto_login(enableCmdQR=2)
 itchat.run()
+

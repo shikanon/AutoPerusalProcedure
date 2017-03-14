@@ -44,6 +44,9 @@ def check_essay(essay):
     #性能测试
     start_time = time.time()
     # 文本处理
+    print(type(essay))
+    if isinstance(essay, str):
+        essay = essay.decode('utf8')
     essay = strQ2B(essay)
     essay = deal_txt(essay)
     result = dict()
@@ -82,4 +85,4 @@ def check_essay(essay):
 def wechat_check_essay(essay):
     check_result = check_essay(essay)
     totalScore = u'总得分:' + str(check_result['totalScore']) + '\n'
-    return [totalScore, u'详细报告见：useease英文作文评分网']
+    return [totalScore, u'详细报告见：useease英文作文评分网 http://aeg.useease.com:9000/upload']
