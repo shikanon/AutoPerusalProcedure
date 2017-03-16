@@ -49,6 +49,7 @@ def check_essay(essay):
         essay = essay.decode('utf8')
     essay = strQ2B(essay)
     essay = deal_txt(essay)
+    print(essay)
     result = dict()
     result['orgin_paper'] = essay
     # 统计信息
@@ -84,5 +85,6 @@ def check_essay(essay):
 
 def wechat_check_essay(essay):
     check_result = check_essay(essay)
-    totalScore = u'总得分:' + str(check_result['totalScore']) + '\n'
-    return [totalScore, u'详细报告见：useease英文作文评分网 http://aeg.useease.com:9000/upload']
+    totalScore = u'总得分:' + str(check_result['totalScore']) + ';\n'
+    spellingScore = u'拼写得分:' + str(check_result['spellings']['spellingScore']) + ';\n'
+    return [totalScore, spellingScore, u'详细报告见：useease英文作文评分网 http://aeg.useease.com:9000/upload']
