@@ -1,0 +1,6 @@
+flask
+Flask-Mako
+nltk
+pylinkgrammar
+pyenchant
+itchat
